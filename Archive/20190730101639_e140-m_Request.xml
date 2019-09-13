@@ -1,0 +1,1110 @@
+POST https://api.sharedhealth.exchange/rest/v1/preconf/THP/mailbox_vs1/Bundle HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/xml+fhir;charset=UTF-8
+X-TELUS-SDF-Developer-Key: MmQ1NjU1NWMtNmJjOS00NGQxLWIxOTAtMWNlYmQxMGU1ZTIyOlFpVXZXRTR6ZGJvQU5mZFFMMGpSN0JxclljaE5qcHYyYlByTFZuTkFaMTBESUZVanczQzV2U1lWVUh6
+Accept: application/xml+fhir
+Content-Length: 48771
+Host: api.sharedhealth.exchange
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="http://sharedhealth.exchange/fhir/StructureDefinition/profile-bundle-message"/>
+		<profile value="http://prescribeit.ca/fhir/StructureDefinition/interaction-bundle-101"/>
+		<tag>
+			<system value="https://fhir.infoway-inforoute.ca/CodeSystem/sharedspecificationversion"/>
+			<code value="PrescribeIT3.0"/>
+		</tag>
+	</meta>
+	<type value="message"/><entry>
+	<fullUrl value="urn:uuid:d8af421f-2099-4a53-b306-80d8cbe3747e" />
+	<resource>
+		<MessageHeader>
+			<id value="d8af421f-2099-4a53-b306-80d8cbe3747e" />
+			<meta>
+				<profile value="http://prescribeit.ca/fhir/StructureDefinition/interaction-messageheader-101" />
+			</meta>
+			<timestamp value="2019-07-30T10:16:19.0457-06:00" />
+			<event>
+				<system value="https://fhir.infoway-inforoute.ca/CodeSystem/sharedmessageevents" />
+				<code value="101" />
+			</event>
+			<source>
+				<extension url="http://sharedhealth.exchange/fhir/StructureDefinition/ext-messageheader-application-id">
+					<valueUri value="urn:oid:2.16.840.1.113883.3.161.2001.1013695"/>
+				</extension>
+				<extension url="http://sharedhealth.exchange/fhir/StructureDefinition/ext-messageheader-conformance-version">
+					<valueString value="99.99"/>
+				</extension>
+				<name value="Telus Health EMR Solutions"/>
+				<software value="PS Suite EMR"/>
+				<version value="99.99"/>
+				<endpoint value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114534"/>
+			</source>
+			<destination>
+				<endpoint value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536"/>
+			</destination>
+			<data>
+				<reference value="Task/6af7b215-0df2-4440-8f16-1b47c8a25347"/>
+				<display value="This is a task in this message"/>
+			</data>
+			<data>
+				<reference value="Task/4370192e-ad32-4ea7-9d3a-9de0c5ae210c"/>
+				<display value="This is a task in this message"/>
+			</data>
+			<data>
+				<reference value="Task/d41b839f-48a2-41df-938d-c034d2dceafa"/>
+				<display value="This is a task in this message"/>
+			</data>
+			<data>
+				<reference value="Task/20cd5fc8-4348-432a-9873-457aa8466239"/>
+				<display value="This is a task in this message"/>
+			</data>
+		</MessageHeader>
+	</resource>
+</entry>
+	<entry>
+		<fullUrl value="urn:uuid:e1a242d1-78e7-4556-ba92-69c0af8a21e5" />
+		<resource>
+			<Patient>
+				<id value="e1a242d1-78e7-4556-ba92-69c0af8a21e5" />
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0203"/>
+							<code value="JHN"/>
+						</coding>
+						<text value="RAMQ"/>
+					</type>
+					<system value="urn:oid:2.16.840.1.113883.4.56"/>
+					<value value="INF1 1234 5678"/>
+				</identifier>
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0203"/>
+							<code value="MR"/>
+						</coding>
+						<text value="Local Patient ID"/>
+					</type>
+					<system value="urn:oid:1.2.3.4.5.9.8888.1"/>
+					<value value="134IDY41W988"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<family value="Côte"/>
+					<given value="Leo"/>
+					<given value="S"/>
+					<prefix value="Mr"/>
+					<suffix value="Jr"/>
+				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="(555) 555-1212"/>
+					<use value="mobile"/>
+				</telecom>
+				<telecom>
+					<extension url="http://sharedhealth.exchange/fhir/StructureDefinition/ext-contactpoint-confidential">
+						<valueBoolean value="true"/>
+					</extension>
+					<system value="phone"/>
+					<value value="(858) 429-5190"/>
+					<use value="home"/>
+				</telecom>
+				<gender value="male"/>
+				<birthDate value="2012-06-07"/>
+				<address>
+					<use value="home"/>
+					<line value="123 North 102nd Street"/>
+					<line value="Apt 4d"/>
+					<city value="Harrisburg"/>
+					<state value="ON"/>
+					<postalCode value="M2N 7H6"/>
+					<country value="Canada"/>
+				</address>
+			</Patient>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535" />
+		<resource>
+			<Practitioner>
+				<id value="200114535" />
+				<extension url="http://sharedhealth.exchange/fhir/StructureDefinition/ext-practitioner-saml">
+					<valueAttachment>
+						<contentType value="application/xml" />
+						<data value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNhbWwyOkFzc2VydGlvbiBJRD0iMWVmZThjMjYtMzYzOC00MDU5LTk4NDktNDdlNzE1ZTMyMTkwIiBJc3N1ZUluc3RhbnQ9IjIwMTktMDctMzBUMTQ6MTY6MTUuNTkyWiIgVmVyc2lvbj0iMi4wIiB4bWxuczpzYW1sMj0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiIgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIj48c2FtbDI6SXNzdWVyPlRoeFN0c1BSRUNPTjwvc2FtbDI6SXNzdWVyPjxkczpTaWduYXR1cmUgeG1sbnM6ZHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxkczpTaWduZWRJbmZvPjxkczpDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIi8+PGRzOlNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNyc2Etc2hhMSIvPjxkczpSZWZlcmVuY2UgVVJJPSIjMWVmZThjMjYtMzYzOC00MDU5LTk4NDktNDdlNzE1ZTMyMTkwIj48ZHM6VHJhbnNmb3Jtcz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFtZXNwYWNlcyBQcmVmaXhMaXN0PSJ4cyIgeG1sbnM6ZWM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIvPjwvZHM6VHJhbnNmb3JtPjwvZHM6VHJhbnNmb3Jtcz48ZHM6RGlnZXN0TWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3NoYTEiLz48ZHM6RGlnZXN0VmFsdWU+T2h3bGRXSDB4M3lyMkNWdGdPTnpmV1FqR01vPTwvZHM6RGlnZXN0VmFsdWU+PC9kczpSZWZlcmVuY2U+PC9kczpTaWduZWRJbmZvPjxkczpTaWduYXR1cmVWYWx1ZT5hZ2VNSVhwVzV1THRqQXd2bm0rc2ZtVllRcmE0UEJuaUJ4bGJsYWxMTmNzR0VsSHltbEdlckNlYk5Pa3VWdXdlQklFTzZLZHFpWG9tVk9YQkxzMndKTUVJUGJUTC9OT0cxQkNNR1YxZG82dVlkQTZyNmpjM011VXNOM2lsdmpvbUhmbHFaUjBaS1pRRW1wR2dPQU1jb3pKSjFDSDNVc0tRZnhlcURuWTYxVnVOazdOWjZzbWpaNUVBNjBqUS9WNEM3RVJJSE92VXV1WW1kNUhhb0VlRGw3VnZOUDdnN3hxU05OSm55N3BKd3VzWFhtWHc0WVlBZkFGV1VTQVZzZk5VZ21iamVEN2R4MnE5L1pVUmZQWGl3dEdDNnJCVUF4dkk2RkZabkpuaE5aTDFjazdhclNKSlUyaG9UejM3V3M5cElvUFJ2WVArbTJKZ1pxK1lNckRaWnc9PTwvZHM6U2lnbmF0dXJlVmFsdWU+PGRzOktleUluZm8+PGRzOlg1MDlEYXRhPjxkczpYNTA5Q2VydGlmaWNhdGU+TUlJSFRqQ0NCamFnQXdJQkFnSVJBSnhsYyswdzd0VjNBQUFBQUZEbEdZMHdEUVlKS29aSWh2Y05BUUVMQlFBd2dib3hDekFKQmdOVgpCQVlUQWxWVE1SWXdGQVlEVlFRS0V3MUZiblJ5ZFhOMExDQkpibU11TVNnd0pnWURWUVFMRXg5VFpXVWdkM2QzTG1WdWRISjFjM1F1CmJtVjBMMnhsWjJGc0xYUmxjbTF6TVRrd053WURWUVFMRXpBb1l5a2dNakF4TWlCRmJuUnlkWE4wTENCSmJtTXVJQzBnWm05eUlHRjEKZEdodmNtbDZaV1FnZFhObElHOXViSGt4TGpBc0JnTlZCQU1USlVWdWRISjFjM1FnUTJWeWRHbG1hV05oZEdsdmJpQkJkWFJvYjNKcApkSGtnTFNCTU1Vc3dIaGNOTVRnd056RTRNakF4T1RJeVdoY05NakF3TnpFME1qQTBPVEl4V2pCL01Rc3dDUVlEVlFRR0V3SkRRVEVQCk1BMEdBMVVFQ0JNR1VYVmxZbVZqTVJFd0R3WURWUVFIRXdoTmIyNTBjbVZoYkRFaU1DQUdBMVVFQ2hNWlEyRnVZV1JoSUVobFlXeDAKYUNCSmJtWnZkMkY1SUVsdVl6RW9NQ1lHQTFVRUF4TWZZMjl1Wm05eWJXRnVZMlV0ZEdWemRDNXdjbVZ6WTNKcFltVnBkQzVqWVRDQwpBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUxrbEpDN1NhY2ZIWFVoeUJYb09KWWpGVGdkVk0raFMvNDB5CnFUL1grMjg2T0hZZnJ4Vnp1VEdQbWJPK0FlNitlOEp6alVkeWNnK2VmTTgzd0ZoVm94ZjRPV3BRMTFBcHgzZVIxeUpXcG9BUTVKcmMKMXkyWEd4S0UwSU8vMlloTHQrYmw3aGVXVW5aVjY5Ymxydmx0Y041T0NFM0xQMkYycGZOaHo0Y3ZUQkkwNVd6K2NoMytCbjZCdnRnMApHMVB2aVdoTkp1b2l0OWoyQUxYNFY0dTdUOXU4RWNLdGNKTzA5cnI5L2Zaa1lmY0h0N0VKU3VqTFA1aTQrbnhDQ3ZBVEJrNTVXVnUxCmI3bVZtaDNrZXhrT3l6dC9ua2wvSmFoSGVTelZENHBxc2ovM2lQK3RZSEtKQXp0WXFxZ0dqSVBkWTBQOE9PbEVnZFdCSTdTWk83WDcKd2dzQ0F3RUFBYU9DQTRjd2dnT0RNQ29HQTFVZEVRUWpNQ0dDSDJOdmJtWnZjbTFoYm1ObExYUmxjM1F1Y0hKbGMyTnlhV0psYVhRdQpZMkV3Z2dIM0Jnb3JCZ0VFQWRaNUFnUUNCSUlCNXdTQ0FlTUI0UUIyQUlkMXYrZFpmUGlNUTVsZnZmTnUvMWFOUjFZMi8wcTFZTUcwCjZ2OWVvSU1QQUFBQlpLOG5rV1VBQUFRREFFY3dSUUlnWGtaWjg1cWpzcFFqdWpNUC9MVHRHUnVNWEJ3U0tqMUN3NmcvNW11ekFHVUMKSVFDVTV1UXdzeEtscmljN1JnQWtveENiZTRBRTNtK2Y4TWZUY2VWTGpseEVnQUIyQU4zckhTdDZEVSttSUl1QnJZRm9jSDR1anAwQgoxVnlJalQwUnhNMjI3TDdNQUFBQlpLOG5rWXNBQUFRREFFY3dSUUloQUtjdFdGRi9QZi9jOTRCYkhIclNNS0RLeFNoZlNKSEo2cjV5CjIxcTZSZTRIQWlBRVB6N1NQQ1FtRVRmV1FFRURicWxwTzBHRWpQazFrWjRZWmd6SExyTE1xd0IyQUZXQjFNSVdrRFlCU3VvTG0xYzgKVS9EQTVEaDRjQ1VJRnkranFoMEhFOU1NQUFBQlpLOG5rYWtBQUFRREFFY3dSUUloQUozUzEzMFczWTAzS1dIanRYWFNwbkxZR3c5dgpkT3pVVitOVzJNT2gzcjBGQWlCVWpOb2QwamNpalhad1dHV2tiLzIwZnppNzVjU2V3eVVNYkRuOGFRMGplUUIzQUtTNUNaQzBHRmdVCmg3c1Rvc3huY0FvOE5aZ0UrUnZmdU9OM3pRN0lEZHdRQUFBQlpLOG5rWXdBQUFRREFFZ3dSZ0loQU1nOHl0NCtGQ0xlYjlyUjRJeEMKeTFiNHBMbldvZFdVK0N4R1VRQzUvVGRRQWlFQW9jWElLa0hOa2lINGovYUVqejlOeENYQjFQVnBmT3dQNElIanczV3VKK2N3RGdZRApWUjBQQVFIL0JBUURBZ1dnTUJNR0ExVWRKUVFNTUFvR0NDc0dBUVVGQndNQk1ETUdBMVVkSHdRc01Db3dLS0Ftb0NTR0ltaDBkSEE2Ckx5OWpjbXd1Wlc1MGNuVnpkQzV1WlhRdmJHVjJaV3d4YXk1amNtd3dTd1lEVlIwZ0JFUXdRakEyQmdwZ2hrZ0JodnBzQ2dFRk1DZ3cKSmdZSUt3WUJCUVVIQWdFV0dtaDBkSEE2THk5M2QzY3VaVzUwY25WemRDNXVaWFF2Y25CaE1BZ0dCbWVCREFFQ0FqQm9CZ2dyQmdFRgpCUWNCQVFSY01Gb3dJd1lJS3dZQkJRVUhNQUdHRjJoMGRIQTZMeTl2WTNOd0xtVnVkSEoxYzNRdWJtVjBNRE1HQ0NzR0FRVUZCekFDCmhpZG9kSFJ3T2k4dllXbGhMbVZ1ZEhKMWMzUXVibVYwTDJ3eGF5MWphR0ZwYmpJMU5pNWpaWEl3SHdZRFZSMGpCQmd3Rm9BVWdxSncKZE4yOFV6L1BlOVQzelgrbllNWUtUTDh3SFFZRFZSME9CQllFRkYzd3kyUUxUWFdhZ0FDeDBhWWcxaUYxL1lsbU1Ba0dBMVVkRXdRQwpNQUF3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUp0Q3hmTGY0dmpYM3k1MWdIaU1FcU15MUtEM2NzY0x6UlhkNUJJdFBudzZZeDRoCnIya3dsZStNb0xYU3dObDhqeHhSeExVbFh1NEQyVVpDUEp4eGZMMTNuUDdiRzNBSzJyb0FkdndSYkI2VXQyYzFUb0dVSktaZDl0bXIKMlN4d3ZHS3ZxSmlBZUR0OC8rZ0RyNkNQZGRZOTBKRW1CRUZNMXVuaU10enV1WTNXUjMrTVArL25IQzhJU0dHcmtESDRmSHF1NW1ZSApuYmFjS2J6UndaVkIxS1dXMUh4dW5yeWZ5QUpGVlZYNmVMUEV4Q0VPUFJNS2htM014MG53SVFxMGFaemg1aUhObjZsRHlNeXExU1kvCkVuT1Rocml4cmg1cTBwZ2IwajBZMlNrUWRXOHg5YU1VTFIxQWRPaW5LWXg4SUI2ZHgyd1BBMElYQ000Tm14ZTdRT3c9PC9kczpYNTA5Q2VydGlmaWNhdGU+PC9kczpYNTA5RGF0YT48L2RzOktleUluZm8+PC9kczpTaWduYXR1cmU+PHNhbWwyOlN1YmplY3Q+PHNhbWwyOk5hbWVJRCBGb3JtYXQ9IlRlbHVzaGVhbHRoLmNvbSIgTmFtZVF1YWxpZmllcj0iVGVsdXNoZWFsdGguY29tIj4yMDAxMTQ1MzU8L3NhbWwyOk5hbWVJRD48c2FtbDI6U3ViamVjdENvbmZpcm1hdGlvbiBNZXRob2Q9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpjbTpiZWFyZXIiPjxzYW1sMjpTdWJqZWN0Q29uZmlybWF0aW9uRGF0YSBOb3RPbk9yQWZ0ZXI9IjIwMTktMDctMzBUMjI6MTY6MTUuNTkyWiIvPjwvc2FtbDI6U3ViamVjdENvbmZpcm1hdGlvbj48L3NhbWwyOlN1YmplY3Q+PHNhbWwyOkNvbmRpdGlvbnMgTm90QmVmb3JlPSIyMDE5LTA3LTMwVDE0OjE2OjE1LjU5MloiIE5vdE9uT3JBZnRlcj0iMjAxOS0wNy0zMFQyMjoxNjoxNS41OTJaIi8+PHNhbWwyOkF1dGhuU3RhdGVtZW50IEF1dGhuSW5zdGFudD0iMjAxOS0wNy0zMFQyMjoxNjoxNS41OTJaIj48c2FtbDI6QXV0aG5Db250ZXh0PjxzYW1sMjpBdXRobkNvbnRleHRDbGFzc1JlZj51cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3NlczpTZWN1cmVSZW1vdGVQYXNzd29yZDwvc2FtbDI6QXV0aG5Db250ZXh0Q2xhc3NSZWY+PC9zYW1sMjpBdXRobkNvbnRleHQ+PC9zYW1sMjpBdXRoblN0YXRlbWVudD48c2FtbDI6QXR0cmlidXRlU3RhdGVtZW50PjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMudGVsdXNoZWFsdGguY29tLzIwMTYvMDUvaWRlbnRpdHkvY2xhaW1zL0xpY2Vuc2UiPjxzYW1sMjpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj51cm46b2lkOjIuMTYuODQwLjEuMTEzODgzLjQuMzQ3OjY1NDcyODA8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMudGVsdXNoZWFsdGguY29tLzIwMTYvMDUvaWRlbnRpdHkvY2xhaW1zL1JvbGVDb2RlIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+aHR0cDovL2hsNy5vcmcvZmhpci9wcmFjdGl0aW9uZXItcm9sZXxkb2N0b3I8L3NhbWwyOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDI6QXR0cmlidXRlPjxzYW1sMjpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMudGVsdXNoZWFsdGguY29tLzIwMTYvMDUvaWRlbnRpdHkvY2xhaW1zL1NlcnZpY2VMb2NhdGlvbkVudGl0eUlEIj48c2FtbDI6QXR0cmlidXRlVmFsdWUgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnR5cGU9InhzOnN0cmluZyI+aHR0cHM6Ly9hcGkuc2hhcmVkaGVhbHRoLmV4Y2hhbmdlL3Jlc3QvdjEvcHJlY29uZi9USFAvVFBSX3ZzMS9Pcmdhbml6YXRpb24vMjAwMTE0NTM0PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0cmlidXRlIE5hbWU9Imh0dHA6Ly9zY2hlbWFzLnRlbHVzaGVhbHRoLmNvbS8yMDE2LzA1L2lkZW50aXR5L2NsYWltcy9MYXN0TmFtZSI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBlPSJ4czpzdHJpbmciPkJyb3duPC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0cmlidXRlIE5hbWU9Imh0dHA6Ly9zY2hlbWFzLnRlbHVzaGVhbHRoLmNvbS8yMDE2LzA1L2lkZW50aXR5L2NsYWltcy9Mb2NhbFVzZXJJRCI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBlPSJ4czpzdHJpbmciPkRhdmlkIEJyb3duPC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48c2FtbDI6QXR0cmlidXRlIE5hbWU9Imh0dHA6Ly9zY2hlbWFzLnRlbHVzaGVhbHRoLmNvbS8yMDE2LzA1L2lkZW50aXR5L2NsYWltcy9GaXJzdE5hbWUiPjxzYW1sMjpBdHRyaWJ1dGVWYWx1ZSB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6dHlwZT0ieHM6c3RyaW5nIj5EYXZpZDwvc2FtbDI6QXR0cmlidXRlVmFsdWU+PC9zYW1sMjpBdHRyaWJ1dGU+PHNhbWwyOkF0dHJpYnV0ZSBOYW1lPSJodHRwOi8vc2NoZW1hcy50ZWx1c2hlYWx0aC5jb20vMjAxNi8wNS9pZGVudGl0eS9jbGFpbXMvQXBwSW5zdGFuY2VJRCI+PHNhbWwyOkF0dHJpYnV0ZVZhbHVlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTp0eXBlPSJ4czpzdHJpbmciPnVybjpvaWQ6Mi4xNi44NDAuMS4xMTM4ODMuMy4xNjEuMjAwMS4xMDEzNjk1PC9zYW1sMjpBdHRyaWJ1dGVWYWx1ZT48L3NhbWwyOkF0dHJpYnV0ZT48L3NhbWwyOkF0dHJpYnV0ZVN0YXRlbWVudD48L3NhbWwyOkFzc2VydGlvbj4=" />
+					</valueAttachment>
+				</extension>
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0203" />
+							<code value="LN" />
+						</coding>
+						<text value="Medical Association of Ontario license" />
+					</type>
+					<system value="urn:oid:2.16.840.1.113883.4.347" />
+					<value value="6547280" />
+				</identifier>
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://hl7.org/fhir/v2/0203"/>
+							<code value="PRN"/>
+						</coding>
+					</type>
+					<system value="http://sharedhealth.exchange/fhir/NamingSystem/registry-id-practitioner"/>
+					<value value="200114535"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<family value="Brown" />
+					<given value="David" />
+					<prefix value="Dr." />
+				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="(123) 456-7890"/>
+					<use value="work"/>
+				</telecom>
+				<telecom>
+					<extension url="http://sharedhealth.exchange/fhir/StructureDefinition/ext-contactpoint-confidential">
+						<valueBoolean value="true"/>
+					</extension>
+					<system value="phone"/>
+					<value value="(263) 222-5763"/>
+					<use value="mobile"/>
+				</telecom>
+				<practitionerRole>
+					<organization>
+						<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114534"/>
+					</organization>
+				</practitionerRole>
+				
+				<practitionerRole>
+					<specialty>
+						<coding>
+							<system value="http://www.cpso.ca/specialties"/>
+							<code value="02832821"/>
+						</coding>
+						<text value="this is the practitioner's specialty"/>
+					</specialty>
+				</practitionerRole>
+
+				<communication>
+					<coding>
+						<system value="urn:ietf:bcp:47"/>
+						<code value="en-CA"/>
+					</coding>
+				</communication>
+			</Practitioner>
+		</resource>
+	</entry>	<entry>
+		<!-- This is the PrescribeIT(TM) registry identifier expressed as a URL -->
+		<fullUrl value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114534" />
+		<resource>
+			<Organization>
+				<!-- This is the PrescribeIT(TM) registry identifier expressed as an actual value -->
+				<id value="200114534" />
+				<identifier>
+					<system value="http://sharedhealth.exchange/fhir/NamingSystem/registry-id-organization" />
+					<value value="200114534" />
+				</identifier>
+				<!-- This is an HL7 code for a physician office -->
+				<type>
+					<coding>
+						<system value="http://hl7.org/fhir/v3/RoleCode"/>
+						<code value="PROFF"/>
+					</coding>
+				</type>
+				<!-- This name and contact information for the source organization -->
+				<name value="Sharon Public Clinic" />
+				<telecom>
+					<system value="phone" />
+					<value value="(123) 123-4567" />
+					<use value="work" />
+				</telecom>
+				<address>
+					<type value="both"/>
+					<line value="456  Some Street"/>
+					<city value="Hamilton"/>
+					<state value="ON"/>
+					<postalCode value="A1B 2C4"/>
+					<country value="CAN"/>
+				</address>
+			</Organization>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536" />
+		<resource>
+			<Organization>
+				<id value="200114536" />
+				<identifier>
+					<system value="http://sharedhealth.exchange/fhir/NamingSystem/registry-id-organization" />
+					<value value="200114536" />
+				</identifier>
+				<type>
+					<coding>
+						<system value="http://hl7.org/fhir/v3/RoleCode"/>
+						<code value="OUTPHARM"/>
+					</coding>
+				</type>
+				<name value="Sharon Public Pharmacy" />
+				<telecom>
+					<system value="phone" />
+					<value value="(123) 123-4567" />
+					<use value="work" />
+				</telecom>
+				<address>
+					<type value="both"/>
+					<line value="456  Some Street"/>
+					<city value="Hamilton"/>
+					<state value="ON"/>
+					<postalCode value="A1B 2C4"/>
+					<country value="CAN"/>
+				</address>
+			</Organization>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:6af7b215-0df2-4440-8f16-1b47c8a25347"/>
+		<resource>
+			<Task>
+				<id value="6af7b215-0df2-4440-8f16-1b47c8a25347"/>
+				<meta>
+					<profile value="http://prescribeit.ca/fhir/StructureDefinition/task-e140-m"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.groupIdentifier">
+					<valueIdentifier>
+						<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.6"/>
+						<value value="843dd147-62e8-4cdf-888d-19430c37d585"/>
+					</valueIdentifier>
+				</extension>
+				<!--extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.basedOn">
+					<valueReference>
+						<reference value="Task/38e5e519-3672-430a-a372-94efd93888a2"/>
+					</valueReference>
+				</extension-->
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.reason">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://hl7.org/fhir/v3/ActReason"/>
+							<code value="NOREQ"/>
+							<display value="Cancel Rx Approved - Prescription no longer required"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<type>
+					<coding>
+						<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontasktype"/>
+						<version value="PrescribeIT 2.0"/>
+						<code value="e140-m"/>
+						<display value="Cancel eRx"/>
+						<userSelected value="false"/>
+					</coding>
+				</type>
+				<status value="requested"/>
+				<subject>
+					<reference value="MedicationOrder/ecf9dd2b-36d3-4523-821b-18119f8e3b62"/>
+				</subject>
+				<for>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</for>
+				<created value="2019-07-30T10:16:19.0458-06:00"/>
+				<lastModified value="2019-07-30T10:16:19.0459-06:00"/>
+				<creator>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</creator>
+				<owner>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:4370192e-ad32-4ea7-9d3a-9de0c5ae210c"/>
+		<resource>
+			<Task>
+				<id value="4370192e-ad32-4ea7-9d3a-9de0c5ae210c"/>
+				<meta>
+					<profile value="http://prescribeit.ca/fhir/StructureDefinition/task-e140-m"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.groupIdentifier">
+					<valueIdentifier>
+						<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.6"/>
+						<value value="843dd147-62e8-4cdf-888d-19430c37d585"/>
+					</valueIdentifier>
+				</extension>
+				<!--extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.basedOn">
+					<valueReference>
+						<reference value="Task/38e5e519-3672-430a-a372-94efd93888a2"/>
+					</valueReference>
+				</extension-->
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.reason">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://hl7.org/fhir/v3/ActReason"/>
+							<code value="NOREQ"/>
+							<display value="Cancel Rx Approved - Prescription no longer required"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<type>
+					<coding>
+						<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontasktype"/>
+						<version value="PrescribeIT 2.0"/>
+						<code value="e140-m"/>
+						<display value="Cancel eRx"/>
+						<userSelected value="false"/>
+					</coding>
+				</type>
+				<status value="requested"/>
+				<subject>
+					<reference value="MedicationOrder/4a13a526-4f45-4037-bd70-6d8e3e610d62"/>
+				</subject>
+				<for>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</for>
+				<created value="2019-07-30T10:16:19.0459-06:00"/>
+				<lastModified value="2019-07-30T10:16:19.0460-06:00"/>
+				<creator>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</creator>
+				<owner>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:d41b839f-48a2-41df-938d-c034d2dceafa"/>
+		<resource>
+			<Task>
+				<id value="d41b839f-48a2-41df-938d-c034d2dceafa"/>
+				<meta>
+					<profile value="http://prescribeit.ca/fhir/StructureDefinition/task-e140-m"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.groupIdentifier">
+					<valueIdentifier>
+						<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.6"/>
+						<value value="843dd147-62e8-4cdf-888d-19430c37d585"/>
+					</valueIdentifier>
+				</extension>
+				<!--extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.basedOn">
+					<valueReference>
+						<reference value="Task/38e5e519-3672-430a-a372-94efd93888a2"/>
+					</valueReference>
+				</extension-->
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.reason">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://hl7.org/fhir/v3/ActReason"/>
+							<code value="NOREQ"/>
+							<display value="Cancel Rx Approved - Prescription no longer required"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<type>
+					<coding>
+						<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontasktype"/>
+						<version value="PrescribeIT 2.0"/>
+						<code value="e140-m"/>
+						<display value="Cancel eRx"/>
+						<userSelected value="false"/>
+					</coding>
+				</type>
+				<status value="requested"/>
+				<subject>
+					<reference value="MedicationOrder/123971b5-8099-4597-8b61-90c239735f91"/>
+				</subject>
+				<for>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</for>
+				<created value="2019-07-30T10:16:19.0460-06:00"/>
+				<lastModified value="2019-07-30T10:16:19.0461-06:00"/>
+				<creator>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</creator>
+				<owner>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:20cd5fc8-4348-432a-9873-457aa8466239"/>
+		<resource>
+			<Task>
+				<id value="20cd5fc8-4348-432a-9873-457aa8466239"/>
+				<meta>
+					<profile value="http://prescribeit.ca/fhir/StructureDefinition/task-e140-m"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.groupIdentifier">
+					<valueIdentifier>
+						<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.6"/>
+						<value value="843dd147-62e8-4cdf-888d-19430c37d585"/>
+					</valueIdentifier>
+				</extension>
+				<!--extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.basedOn">
+					<valueReference>
+						<reference value="Task/38e5e519-3672-430a-a372-94efd93888a2"/>
+					</valueReference>
+				</extension-->
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-Task.reason">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://hl7.org/fhir/v3/ActReason"/>
+							<code value="NOREQ"/>
+							<display value="Cancel Rx Approved - Prescription no longer required"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<type>
+					<coding>
+						<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontasktype"/>
+						<version value="PrescribeIT 2.0"/>
+						<code value="e140-m"/>
+						<display value="Cancel eRx"/>
+						<userSelected value="false"/>
+					</coding>
+				</type>
+				<status value="requested"/>
+				<subject>
+					<reference value="MedicationOrder/88b338bd-6df8-4416-b68d-b033acc47ecb"/>
+				</subject>
+				<for>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</for>
+				<created value="2019-07-30T10:16:19.0461-06:00"/>
+				<lastModified value="2019-07-30T10:16:19.0462-06:00"/>
+				<creator>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</creator>
+				<owner>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Organization/200114536"/>
+				</owner>
+			</Task>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:ecf9dd2b-36d3-4523-821b-18119f8e3b62"/>
+		<resource>
+			<MedicationOrder>
+				<id value="ecf9dd2b-36d3-4523-821b-18119f8e3b62"/> 
+				<contained>
+					<Medication>
+						<id value="med"/>
+						<code>
+							<coding>
+								<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative">
+									<valueBoolean value="true"/>
+								</extension>
+								<system value="https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"/>
+								<code value="00618292"/>
+								<display value="Cloxacillin, 250 mg capsule"/>
+							</coding>
+							<text value="Cloxacillin, 250 mg capsule" />
+						</code>
+					</Medication>
+				</contained>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-MedicationRequest.category">
+					<valueCodeableConcept>
+						<coding>
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontype"/>
+							<code value="medication"/>
+							<display value="medication"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-treatment-type">
+					<valueCode value="CHRON"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-rendered-dosage">
+					<valueString value="Take 8 tablet 1 time per d for 3 d THEN Take 6 tablet 1 time per d for 3 d THEN Take 4 tablet 1 time per d for 3 d THEN Take 2 tablet 1 time per d for 3 d THEN Take 1 tablet 1 time per d for 3 d"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-over-25-dur">
+					<valueBoolean value="true"/>
+				</extension>
+				<identifier>
+	                    <type>
+						<coding>
+							<system value="http://hl7.org/fhir/identifier-type"/>
+							<code value="PLAC"/>
+						</coding>
+					</type>						   
+					<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+					<value value="GOWMN1ZSEN"/>
+				</identifier>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#med"/>
+				</medicationReference>
+				<patient>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</patient>
+				<dateWritten value="2019-07-30T10:16:19.0462-06:00"/>
+				<prescriber>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</prescriber>
+				<dosageInstruction>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Dosage.sequence">
+						<valueInteger value="1"/>
+					</extension>
+					<text value="Take 8 tablet 1 time per d for 3 d"/>
+					<timing>
+						<repeat>
+							<duration value="3"/>
+							<durationUnit value="d"/>
+							<frequency value="1"/>
+							<period value="1"/>
+							<periodUnit value="d"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="urn:com:fdbhealth:medroute"/>
+							<code value="1"/>
+							<display value="ORAL"/>
+						</coding>
+						<text value="Oral"/>
+					</route>
+					<doseQuantity>
+						<value value="4"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</doseQuantity>
+				</dosageInstruction>
+				<dispenseRequest>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-quantity">
+						<valueQuantity>
+							<value value="80"/>
+							<unit value="mg" />
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"/>
+							<code value="428641000"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-days-supply">
+						<valueQuantity>
+							<value value="15"/>
+							<unit value="1"/>
+							<system value="http://unitsofmeasure.org"/>
+							<code value="d"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-dispense-first-fill">
+						<extension url="quantity">
+							<valueQuantity>
+								<value value="40"/>
+								<unit value="capsule"/>
+								<system value="http://snomed.info/sct"/>
+								<code value="428641000"/>
+							</valueQuantity>
+						</extension>
+						<extension url="expectedSupplyDuration">
+							<valueQuantity>
+								<value value="15"/>
+								<unit value="1"/>
+								<system value="http://unitsofmeasure.org"/>
+								<code value="d"/>
+							</valueQuantity>
+						</extension>
+					</extension>
+					<validityPeriod>
+						<start value="2019-07-30T10:16:19.0463-06:00"/>
+						<end value="2019-07-30T10:16:19.0463-06:00"/>
+					</validityPeriod>
+					<quantity>
+						<value value="40"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</quantity>
+					<expectedSupplyDuration>
+						<value value="15"/>
+						<system value="http://unitsofmeasure.org"/>
+						<code value="d"/>
+					</expectedSupplyDuration>
+				</dispenseRequest>
+				<priorPrescription>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Reference.identifier">
+						<valueIdentifier>
+							<type>
+								<coding>
+									<system value="http://hl7.org/fhir/identifier-type"/>
+									<code value="PLAC"/>
+								</coding>
+							</type>				 
+							<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+							<value value="JN6OKQAE1Z"/>
+						</valueIdentifier>
+					</extension>
+				</priorPrescription>
+			</MedicationOrder>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:4a13a526-4f45-4037-bd70-6d8e3e610d62"/>
+		<resource>
+			<MedicationOrder>
+				<id value="4a13a526-4f45-4037-bd70-6d8e3e610d62"/> 
+				<contained>
+					<Medication>
+						<id value="med"/>
+						<code>
+							<coding>
+								<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative">
+									<valueBoolean value="true"/>
+								</extension>
+								<system value="https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"/>
+								<code value="00618292"/>
+								<display value="Cloxacillin, 250 mg capsule"/>
+							</coding>
+							<text value="Cloxacillin, 250 mg capsule" />
+						</code>
+					</Medication>
+				</contained>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-MedicationRequest.category">
+					<valueCodeableConcept>
+						<coding>
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontype"/>
+							<code value="medication"/>
+							<display value="medication"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-treatment-type">
+					<valueCode value="CHRON"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-rendered-dosage">
+					<valueString value="Take 8 tablet 1 time per d for 3 d THEN Take 6 tablet 1 time per d for 3 d THEN Take 4 tablet 1 time per d for 3 d THEN Take 2 tablet 1 time per d for 3 d THEN Take 1 tablet 1 time per d for 3 d"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-over-25-dur">
+					<valueBoolean value="true"/>
+				</extension>
+				<identifier>
+	                    <type>
+						<coding>
+							<system value="http://hl7.org/fhir/identifier-type"/>
+							<code value="PLAC"/>
+						</coding>
+					</type>						   
+					<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+					<value value="UWNNPLZAJT"/>
+				</identifier>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#med"/>
+				</medicationReference>
+				<patient>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</patient>
+				<dateWritten value="2019-07-30T10:16:19.0464-06:00"/>
+				<prescriber>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</prescriber>
+				<dosageInstruction>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Dosage.sequence">
+						<valueInteger value="1"/>
+					</extension>
+					<text value="Take 8 tablet 1 time per d for 3 d"/>
+					<timing>
+						<repeat>
+							<duration value="3"/>
+							<durationUnit value="d"/>
+							<frequency value="1"/>
+							<period value="1"/>
+							<periodUnit value="d"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="urn:com:fdbhealth:medroute"/>
+							<code value="1"/>
+							<display value="ORAL"/>
+						</coding>
+						<text value="Oral"/>
+					</route>
+					<doseQuantity>
+						<value value="4"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</doseQuantity>
+				</dosageInstruction>
+				<dispenseRequest>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-quantity">
+						<valueQuantity>
+							<value value="80"/>
+							<unit value="mg" />
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"/>
+							<code value="428641000"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-days-supply">
+						<valueQuantity>
+							<value value="15"/>
+							<unit value="1"/>
+							<system value="http://unitsofmeasure.org"/>
+							<code value="d"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-dispense-first-fill">
+						<extension url="quantity">
+							<valueQuantity>
+								<value value="40"/>
+								<unit value="capsule"/>
+								<system value="http://snomed.info/sct"/>
+								<code value="428641000"/>
+							</valueQuantity>
+						</extension>
+						<extension url="expectedSupplyDuration">
+							<valueQuantity>
+								<value value="15"/>
+								<unit value="1"/>
+								<system value="http://unitsofmeasure.org"/>
+								<code value="d"/>
+							</valueQuantity>
+						</extension>
+					</extension>
+					<validityPeriod>
+						<start value="2019-07-30T10:16:19.0464-06:00"/>
+						<end value="2019-07-30T10:16:19.0465-06:00"/>
+					</validityPeriod>
+					<quantity>
+						<value value="40"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</quantity>
+					<expectedSupplyDuration>
+						<value value="15"/>
+						<system value="http://unitsofmeasure.org"/>
+						<code value="d"/>
+					</expectedSupplyDuration>
+				</dispenseRequest>
+				<priorPrescription>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Reference.identifier">
+						<valueIdentifier>
+							<type>
+								<coding>
+									<system value="http://hl7.org/fhir/identifier-type"/>
+									<code value="PLAC"/>
+								</coding>
+							</type>				 
+							<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+							<value value="J8L8AT60B8"/>
+						</valueIdentifier>
+					</extension>
+				</priorPrescription>
+			</MedicationOrder>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:123971b5-8099-4597-8b61-90c239735f91"/>
+		<resource>
+			<MedicationOrder>
+				<id value="123971b5-8099-4597-8b61-90c239735f91"/> 
+				<contained>
+					<Medication>
+						<id value="med"/>
+						<code>
+							<coding>
+								<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative">
+									<valueBoolean value="true"/>
+								</extension>
+								<system value="https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"/>
+								<code value="00618292"/>
+								<display value="Cloxacillin, 250 mg capsule"/>
+							</coding>
+							<text value="Cloxacillin, 250 mg capsule" />
+						</code>
+					</Medication>
+				</contained>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-MedicationRequest.category">
+					<valueCodeableConcept>
+						<coding>
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontype"/>
+							<code value="medication"/>
+							<display value="medication"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-treatment-type">
+					<valueCode value="CHRON"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-rendered-dosage">
+					<valueString value="Take 8 tablet 1 time per d for 3 d THEN Take 6 tablet 1 time per d for 3 d THEN Take 4 tablet 1 time per d for 3 d THEN Take 2 tablet 1 time per d for 3 d THEN Take 1 tablet 1 time per d for 3 d"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-over-25-dur">
+					<valueBoolean value="true"/>
+				</extension>
+				<identifier>
+	                    <type>
+						<coding>
+							<system value="http://hl7.org/fhir/identifier-type"/>
+							<code value="PLAC"/>
+						</coding>
+					</type>						   
+					<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+					<value value="A0OGH27UN5"/>
+				</identifier>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#med"/>
+				</medicationReference>
+				<patient>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</patient>
+				<dateWritten value="2019-07-30T10:16:19.0465-06:00"/>
+				<prescriber>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</prescriber>
+				<dosageInstruction>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Dosage.sequence">
+						<valueInteger value="1"/>
+					</extension>
+					<text value="Take 8 tablet 1 time per d for 3 d"/>
+					<timing>
+						<repeat>
+							<duration value="3"/>
+							<durationUnit value="d"/>
+							<frequency value="1"/>
+							<period value="1"/>
+							<periodUnit value="d"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="urn:com:fdbhealth:medroute"/>
+							<code value="1"/>
+							<display value="ORAL"/>
+						</coding>
+						<text value="Oral"/>
+					</route>
+					<doseQuantity>
+						<value value="4"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</doseQuantity>
+				</dosageInstruction>
+				<dispenseRequest>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-quantity">
+						<valueQuantity>
+							<value value="80"/>
+							<unit value="mg" />
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"/>
+							<code value="428641000"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-days-supply">
+						<valueQuantity>
+							<value value="15"/>
+							<unit value="1"/>
+							<system value="http://unitsofmeasure.org"/>
+							<code value="d"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-dispense-first-fill">
+						<extension url="quantity">
+							<valueQuantity>
+								<value value="40"/>
+								<unit value="capsule"/>
+								<system value="http://snomed.info/sct"/>
+								<code value="428641000"/>
+							</valueQuantity>
+						</extension>
+						<extension url="expectedSupplyDuration">
+							<valueQuantity>
+								<value value="15"/>
+								<unit value="1"/>
+								<system value="http://unitsofmeasure.org"/>
+								<code value="d"/>
+							</valueQuantity>
+						</extension>
+					</extension>
+					<validityPeriod>
+						<start value="2019-07-30T10:16:19.0466-06:00"/>
+						<end value="2019-07-30T10:16:19.0466-06:00"/>
+					</validityPeriod>
+					<quantity>
+						<value value="40"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</quantity>
+					<expectedSupplyDuration>
+						<value value="15"/>
+						<system value="http://unitsofmeasure.org"/>
+						<code value="d"/>
+					</expectedSupplyDuration>
+				</dispenseRequest>
+				<priorPrescription>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Reference.identifier">
+						<valueIdentifier>
+							<type>
+								<coding>
+									<system value="http://hl7.org/fhir/identifier-type"/>
+									<code value="PLAC"/>
+								</coding>
+							</type>				 
+							<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+							<value value="Z2012QV13S"/>
+						</valueIdentifier>
+					</extension>
+				</priorPrescription>
+			</MedicationOrder>
+		</resource>
+	</entry>	<entry>
+		<fullUrl value="urn:uuid:88b338bd-6df8-4416-b68d-b033acc47ecb"/>
+		<resource>
+			<MedicationOrder>
+				<id value="88b338bd-6df8-4416-b68d-b033acc47ecb"/> 
+				<contained>
+					<Medication>
+						<id value="med"/>
+						<code>
+							<coding>
+								<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative">
+									<valueBoolean value="true"/>
+								</extension>
+								<system value="https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"/>
+								<code value="00618292"/>
+								<display value="Cloxacillin, 250 mg capsule"/>
+							</coding>
+							<text value="Cloxacillin, 250 mg capsule" />
+						</code>
+					</Medication>
+				</contained>
+				<extension url="http://hl7.org/fhir/StructureDefinition/extension-MedicationRequest.category">
+					<valueCodeableConcept>
+						<coding>
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/prescriptiontype"/>
+							<code value="medication"/>
+							<display value="medication"/>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-treatment-type">
+					<valueCode value="CHRON"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medication-rendered-dosage">
+					<valueString value="Take 8 tablet 1 time per d for 3 d THEN Take 6 tablet 1 time per d for 3 d THEN Take 4 tablet 1 time per d for 3 d THEN Take 2 tablet 1 time per d for 3 d THEN Take 1 tablet 1 time per d for 3 d"/>
+				</extension>
+				<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-over-25-dur">
+					<valueBoolean value="true"/>
+				</extension>
+				<identifier>
+	                    <type>
+						<coding>
+							<system value="http://hl7.org/fhir/identifier-type"/>
+							<code value="PLAC"/>
+						</coding>
+					</type>						   
+					<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+					<value value="ALWHSKY9DJ"/>
+				</identifier>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#med"/>
+				</medicationReference>
+				<patient>
+					<reference value="Patient/e1a242d1-78e7-4556-ba92-69c0af8a21e5"/>
+				</patient>
+				<dateWritten value="2019-07-30T10:16:19.0467-06:00"/>
+				<prescriber>
+					<reference value="https://api.sharedhealth.exchange/rest/v1/preconf/THP/TPR_vs1/Practitioner/200114535"/>
+				</prescriber>
+				<dosageInstruction>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Dosage.sequence">
+						<valueInteger value="1"/>
+					</extension>
+					<text value="Take 8 tablet 1 time per d for 3 d"/>
+					<timing>
+						<repeat>
+							<duration value="3"/>
+							<durationUnit value="d"/>
+							<frequency value="1"/>
+							<period value="1"/>
+							<periodUnit value="d"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="urn:com:fdbhealth:medroute"/>
+							<code value="1"/>
+							<display value="ORAL"/>
+						</coding>
+						<text value="Oral"/>
+					</route>
+					<doseQuantity>
+						<value value="4"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</doseQuantity>
+				</dosageInstruction>
+				<dispenseRequest>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-quantity">
+						<valueQuantity>
+							<value value="80"/>
+							<unit value="mg" />
+							<system value="https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"/>
+							<code value="428641000"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-total-days-supply">
+						<valueQuantity>
+							<value value="15"/>
+							<unit value="1"/>
+							<system value="http://unitsofmeasure.org"/>
+							<code value="d"/>
+						</valueQuantity>
+					</extension>
+					<extension url="http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-dispense-first-fill">
+						<extension url="quantity">
+							<valueQuantity>
+								<value value="40"/>
+								<unit value="capsule"/>
+								<system value="http://snomed.info/sct"/>
+								<code value="428641000"/>
+							</valueQuantity>
+						</extension>
+						<extension url="expectedSupplyDuration">
+							<valueQuantity>
+								<value value="15"/>
+								<unit value="1"/>
+								<system value="http://unitsofmeasure.org"/>
+								<code value="d"/>
+							</valueQuantity>
+						</extension>
+					</extension>
+					<validityPeriod>
+						<start value="2019-07-30T10:16:19.0468-06:00"/>
+						<end value="2019-07-30T10:16:19.0468-06:00"/>
+					</validityPeriod>
+					<quantity>
+						<value value="40"/>
+						<unit value="capsule"/>
+						<system value="http://snomed.info/sct"/>
+						<code value="428641000"/>
+					</quantity>
+					<expectedSupplyDuration>
+						<value value="15"/>
+						<system value="http://unitsofmeasure.org"/>
+						<code value="d"/>
+					</expectedSupplyDuration>
+				</dispenseRequest>
+				<priorPrescription>
+					<extension url="http://hl7.org/fhir/StructureDefinition/extension-Reference.identifier">
+						<valueIdentifier>
+							<type>
+								<coding>
+									<system value="http://hl7.org/fhir/identifier-type"/>
+									<code value="PLAC"/>
+								</coding>
+							</type>				 
+							<system value="urn:oid:2.16.840.1.113883.3.161.2001.1013695.2"/>
+							<value value="4RQINSDLBO"/>
+						</valueIdentifier>
+					</extension>
+				</priorPrescription>
+			</MedicationOrder>
+		</resource>
+	</entry></Bundle>

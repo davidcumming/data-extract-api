@@ -1,0 +1,21 @@
+{
+  "name": "dataextractapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.0",
+    "csv-writer": "^1.5.0",
+    "csvjson": "^5.1.0",
+    "fast-xml-parser": "^3.12.19",
+    "fhir": "^4.7.0",
+    "he": "^1.2.0",
+    "http-request-parser": "^2.0.0-alpha",
+    "line-reader": "^0.4.0"
+  }
+}
